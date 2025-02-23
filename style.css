@@ -251,7 +251,7 @@ body {
 .shortcut-arrow {
     position: absolute;
     bottom: -2px;
-    left: -2px;  /* Changed from right: -2px to left: -2px */
+    left: -2px;  
     width: 16px;
     height: 16px;
     background-color: transparent;
