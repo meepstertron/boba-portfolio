@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Hellu</title>
+</head>
+<body>
+    <div class="main">
+        <div class="desktop">
+            <a href="#" class="app">
+                <div class="app-icon">
+                    <img src="icon.png" alt="icon" width="50px" height="50px">
+                    <div class="shortcut-arrow"></div>
+                </div>
+                <div class="app-name">
+                    <b>Hackclub!</b>
+                </div>
+                <a href="https://github.com/meepstertron" class="app">
+                    <div class="app-icon">
+                        <img src="github-mark.png" alt="icon" width="50px" height="50px">
+                        <div class="shortcut-arrow"></div>
+                    </div>
+                    <div class="app-name">
+                        <b>My Github</b>
+                    </div>
+            </a>
+        </div>
+        <div class="overlay">
+            <div class="window">
+                <div class="window-header">
+                    <div class="window-title">About.exe</div>
+                    <div class="window-controls">
+                        <div class="window-button minimize-button"></div>
+                        <div class="window-button maximize-button"></div>
+                        <div class="window-button close-button"></div>
+                    </div>
+                </div>
+                <div class="window-content">
+                    <h2>Hi there,</h2>
+                    <p>I'm Jan, a coding person from switzerland who loves building stupid stuff :) This is my little corner on the internet. </p>
+                    <p>Feel free to look around and click on the icons to see what I've been up to.</p>
+                    <p>Have a great day!</p>
+                </div>
+            </div>
+            <div class="window win-2">
+                <div class="window-header">
+                    <div class="window-title">Webring!</div>
+                    <div class="window-controls">
+                        <div class="window-button minimize-button"></div>
+                        <div class="window-button maximize-button"></div>
+                        <div class="window-button close-button"></div>
+                    </div>
+                </div>
+                <div class="window-content">
+                    <div id="webring-wrapper">
+                        <a href="https://webring.hackclub.com/" id="previousBtn" class="webring-anchor" title="Previous">‹</a>
+                        <a href="https://webring.hackclub.com/" class="webring-logo" title="Hack Club Webring" alt="Hack Club Webring"></a>
+                        <a href="https://webring.hackclub.com/" id="nextBtn" class="webring-anchor" title="Next">›</a>
+                        <script src="https://webring.hackclub.com/embed.min.js"></script>
+                      </div>
+                </div>
+            </div>
+            <div class="window win-1">
+                <div class="window-header">
+                    <div class="window-title">doodle.png</div>
+                    <div class="window-controls">
+                        <div class="window-button minimize-button"></div>
+                        <div class="window-button maximize-button"></div>
+                        <div class="window-button close-button"></div>
+                    </div>
+                </div>
+                <div class="window-content">
+                    <img src="./doodle.png" alt="icon" height="500px">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="taskbar">
+        <div class="taskbar-left">
+            <div class="start-button"><i><b>Start</b></i></div>
+            <div class="program-entry active">
+                <span>About</span>
+            </div>
+        </div>
+        <div class="clock" id="clock">04:04</div>
+    </div>
+    <!-- <script src="script.js"></script> no js allowed, uncomment to enable clock lol-->
+</body>
+</html>

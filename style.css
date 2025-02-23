@@ -1,0 +1,279 @@
+body {
+    background-color: #f0f0f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('wp.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    min-height: 100vh;
+    position: relative;
+}
+
+.taskbar {
+    background: linear-gradient(to bottom, #5084ff 1%, #275cdb 15%, #1e4c8f 100%);
+    color: #fff;
+    height: 5vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.start-button {
+    background: linear-gradient(to bottom, #79ee77 1%, #39e036 15%, #327e3b 100%);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5vh;
+    width: auto;
+    min-width: 80px;
+    height: 5vh;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-right: 5px;
+}
+
+.start-button:hover {
+    background: linear-gradient(to bottom, #90eb8e 1%, #79ee77 15%, #327e3b 100%);
+}
+
+.start-button i {
+    text-shadow: #21751f 0 0 5px;
+}
+
+.window {
+    position: absolute;
+    background-color: #ffffff;
+    border: 1px solid #999999;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    height: 400px;
+}
+
+/* Positioning for first window */
+.window:first-child {
+    left: calc(50% - 420px);
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+/* Positioning for second window */
+.window:nth-child(2) {
+    left: calc(50% + 20px);
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+.window-header {
+    background: linear-gradient(to bottom, #5084ff 1%, #275cdb 15%, #1e4c8f 100%);
+    height: 30px;
+    border-radius: 8px 8px 0 0;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+.window-content {
+    padding: 15px;
+}
+
+.window-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.window-controls {
+    display: flex;
+    gap: 5px;
+}
+
+.window-button {
+    width: 15px;
+    height: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.window-button::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    opacity: 0.7;
+}
+
+.close-button::before {
+    content: '×';
+    color: #800;
+    font-size: 14px;
+    line-height: 1;
+    width: auto;
+    height: auto;
+    font-weight: bold;
+}
+
+.minimize-button::before {
+    content: '';
+    width: 8px;
+    height: 2px;
+    background-color: #885800;
+}
+
+.maximize-button::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border: 1px solid #006500;
+}
+
+.window-button:hover::before {
+    opacity: 1;
+}
+
+.close-button {
+    background-color: #ff5f57;
+}
+
+.minimize-button {
+    background-color: #febc2e;
+}
+
+.maximize-button {
+    background-color: #28c940;
+}
+
+.program-entry {
+    background: linear-gradient(to bottom, #6b9fff 1%, #4177e6 15%, #2e62c7 100%);
+    height: 80%;
+    padding: 0 15px;
+    margin: 0 2px;
+    display: flex;
+    align-items: center;
+    border-left: 1px solid #5682dd;
+    border-right: 1px solid #5682dd;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 2vh;
+    min-width: 120px;
+    width: auto;
+}
+
+.program-entry:hover {
+    background: linear-gradient(to bottom, #7ba7ff 1%, #528af5 15%, #3a71dd 100%);
+}
+
+.program-entry.active {
+    background: linear-gradient(to bottom, #89b1ff 1%, #629cf8 15%, #4680ef 100%);
+    box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
+.taskbar-left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.clock {
+    padding: 0 15px;
+    font-size: 2vh;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    border-left: 1px solid #3967b6;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.desktop {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 80px);
+    gap: 20px;
+    height: calc(100vh - 5vh);
+}
+
+.app {
+    width: 80px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.app:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.app-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.shortcut-arrow {
+    position: absolute;
+    bottom: -2px;
+    left: -2px;  /* Changed from right: -2px to left: -2px */
+    width: 16px;
+    height: 16px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shortcut-arrow::before {
+    content: "↗";
+    color: white;
+    font-size: 14px;
+    text-shadow: 
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+
+.app-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.app-name {
+    font-size: 12px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    word-wrap: break-word;
+    width: 100%;
+}
+
+.win-1 {
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.win-2 {
+    text-align: center;
+    width: 150px;
+    height: 100px;
+    overflow: hidden;
+}
