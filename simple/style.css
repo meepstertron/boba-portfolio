@@ -8,7 +8,7 @@ body {
 }
 
 .main {
-    max-width: 650px;
+    
     margin: 40px auto;
     padding: 30px;
     background: white;
@@ -39,4 +39,26 @@ p {
 
 strong {
     color: #1a1a1a;
+}
+
+footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: #e4e4e4 1px solid;
+    text-align: center;
+    color: #666;
+}
+
+.fit {
+    width: fit-content;
+    height: auto;
+}
+
+.img-container {
+    text-align: center;
+}
+
+.wide {
+    width: 100%;
+    max-width: 650px;
 }
